@@ -59,6 +59,18 @@ function skillsEffect() {
 
 // Calculer et afficher le score du quiz
 function calculateScore() {
+    var allAnswered = true;
+    for (var i = 1; i <= 10; i++) {
+        var answer = document.querySelector('input[name="q' + i + '"]:checked');
+        if (!answer) {
+            allAnswered = false;
+            break;
+        }
+    }
+    if (!allAnswered) {
+        alert("Veuillez répondre à toutes les questions avant de soumettre.");
+        return;
+    }
     var q1Answer = document.querySelector('input[name="q1"]:checked').value;
     var q2Answer = document.querySelector('input[name="q2"]:checked').value;
     var q3Answer = document.querySelector('input[name="q3"]:checked').value;
