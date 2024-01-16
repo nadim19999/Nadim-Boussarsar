@@ -68,7 +68,7 @@ function calculateScore() {
         }
     }
     if (!allAnswered) {
-        alert("Veuillez répondre à toutes les questions avant de soumettre.");
+        alert("Please answer all questions before submitting");
         return;
     }
     var q1Answer = document.querySelector('input[name="q1"]:checked').value;
